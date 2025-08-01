@@ -26,7 +26,7 @@ int main() {
     
     // Now we have our array which has N elements.
     
-    while(1) {    // This is done so that the user can insert again and again until the memory is full
+    while(1) {    // This is done so that the user can insert again and again until there is nothing to delete
         
         printf("Enter deletion index:\n");
         int K;
