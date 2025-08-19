@@ -36,7 +36,6 @@ void printAddress(Node* node) {
     printf("NULL\n");
 }
 
-
 void insertFirst(Node** head, int data) {
     Node* node = createNode(data);
     node->next = *head;
@@ -121,16 +120,13 @@ int main() {
                 
             case 3:
                 while(1) {
-                    printf("\n--Enter a character to go back--\n");
+                    printf("\n--Enter 0 to go back--\n");
                     printAddress(head);
                     Node *pre, *del;
                     printf("\nEnter the address of deletion: ");
-                    int i = scanf("%p", &del);
-                    if(!i) {
-                        char ch;
-                        while ((ch = getchar()) != '\n' && ch != EOF);
+                    scanf("%p", &del);
+                    if(!del) {
                         break;
-                        
                     }
                     
                     printf("Enter the previous address: ");
@@ -142,6 +138,7 @@ int main() {
                     }
                     else delete(pre, del);
                     
+                    printf("\nYour updated list is:\n");
                     print(head);
                 }
                 break;
